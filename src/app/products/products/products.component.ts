@@ -1,3 +1,4 @@
+import { Product } from './../model/product';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  products: Product[] = [
+    { _id: 1, name: 'The Lord of the Rings', description: 'Lorem ipsum dolor sit amet, consectetur.', price: 90.5, imgUrl: 'teste'}
+  ];
+  displayedColumns = ['name', 'description', 'price', 'imgUrl'];
+
+  constructor() {
+    //this.products = [];
+  }
 
   ngOnInit(): void {
+
   }
 
 }
